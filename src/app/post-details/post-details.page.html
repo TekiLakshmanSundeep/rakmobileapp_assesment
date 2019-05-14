@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="theme">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/posts"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Posts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="comment-body">
+    <ion-progress-bar *ngIf="!isLoadingCompleted" type="indeterminate"></ion-progress-bar>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{postTitle}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{postBody}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="comment-text-bottom">
+  <ion-label>Comments</ion-label>
+  </div>
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let comments of commentsList">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Name : {{comments.name}}</ion-card-subtitle>
+            <ion-card-subtitle>email: {{comments.email}}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            {{comments.body}}
+          </ion-card-content>
+        
+        </ion-card>
+      
+
+      </ion-item>
+
+
+    </ion-list>
+  </div>
+</ion-content>

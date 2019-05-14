@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="theme">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/albums"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="user-info-title">Photos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-progress-bar *ngIf="!isLoadingCompleted" type="indeterminate"></ion-progress-bar>
+  <div class="images">
+    <div class="one-image" *ngFor="let photo of photosList">
+      <img src="{{photo.thumbnailUrl}}" (click)="openPhotoViewer(photo)">
+    </div>
+  </div>
+
+
+</ion-content>

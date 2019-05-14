@@ -1,0 +1,30 @@
+.image-container {
+    min-height: 200px;
+    background-size: cover;
+}
+
+@media (min-width: 0px) {
+    .images {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 420px) {
+    .images {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 720px) {
+    .images {
+        column-count: 4;
+    }
+}
+
+.one-image {
+    text-align: center;
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+    
+}

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="theme">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Posts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let post of userPostList" (click)="openPostDetail(post)">
+
+    <ion-card-header>
+    <ion-card-title>{{post.title}}</ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+      {{post.body}}
+    </ion-card-content>
+    <div class="card-comment-text">
+      <ion-label>Click to view comments</ion-label>
+    </div>
+  </ion-card>
+</ion-content>
